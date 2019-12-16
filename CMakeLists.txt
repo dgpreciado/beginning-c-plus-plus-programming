@@ -7,4 +7,4 @@ include_directories(.)
 
 add_executable(beginning_c_plus_plus_programming
         .gitattributes
-        README.md section4/FirstProgram.cpp)
+        README.md section4/FirstProgram.cpp section6/Declaring_Variables.cpp section6/sec6Exercise1.cpp)

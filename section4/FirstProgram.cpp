@@ -3,7 +3,7 @@
 //
 #include <iostream>
 
-int main(){
+int main1(){
     int favorite_number;
     std::cout << "Enter your favorite number between 1 and 100:";
     std::cin >>  favorite_number;
