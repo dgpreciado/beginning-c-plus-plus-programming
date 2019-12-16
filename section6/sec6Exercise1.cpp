@@ -7,10 +7,10 @@ using namespace std;
 
 int age {18}; //global variable
 
-int main(){
+int main61(){
     //employee_profile
     cout << "Enter name" << endl;
-    string name ="";
+    string name;
     cin >> name;
 
     int age {16};//local variable
