@@ -63,7 +63,7 @@ using namespace std;
 //}
 
 /*Section 6 challenge*/
-int main(){
+int main6chall(){
     cout << "Hello, welcome to Frank's Carpet Cleaning Service" << endl;
     cout << "\nHow many small rooms would you like cleaned? " << endl;
     int number_of_small_rooms {0};
