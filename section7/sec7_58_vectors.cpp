@@ -5,7 +5,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-int main(){
+int main758(){
     vector <char> vowels {'a','e','i','o','u'};
     vector <int> test_scores {10,98,89,85,93};
     vector <double> hi_temperatures (365,80.0);//365 is the size of the vector and second number is what to init the vector with.
