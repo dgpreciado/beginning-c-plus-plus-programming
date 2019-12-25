@@ -3,7 +3,7 @@
 //
 #include <iostream>
 using namespace std;
-int main(){
+int main8_73(){
     /** static cast modern new style more restrictive sec8 68 **/
     int num1 {10}, num2 {30}, num3 {20};
     int total = num1 + num2 + num3;
