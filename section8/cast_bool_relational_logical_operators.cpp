@@ -83,6 +83,50 @@ int main(){
     wear_coat = temperature < temperature_for_coat && wind_speed > wind_speed_for_coat;
     cout << "Do you need to wear a coat using AND? "<< wear_coat << endl;
 
-    cout << "\nCompound Assignment" << endl;
+    cout << "\nCompound Assignment, BITWISE operators" << endl;
+    /* OPERATOR     EXAMPLE     MEANING
+     * +=           LHS += RHS  LHS = LHS + RHS
+     * -=           LHS -= RHS  LHS = LHS - RHS;
+     * *=           LHS *= RHS  LHS = LHS * RHS;
+     * /=           LHS /= RHS  LHS = LHS / RHS;
+     * %+           LHS %= RHS  LHS = LHS % RHS;
+     * >>=         LHS >>= RHS  LHS = LHS >> RHS;
+     * <<=         LHS <<= RHS  LHS = LHS << RHS;
+     * &=           LHS &= RHS  LHS = LHS & RHS;
+     * ^=           LHS ^= RHS  LHS = LHS ^ RHS;
+     * |=           LHS |= RHS  LHS = LHS | RHS;
+     * */
+    unsigned int a {60}; //60 = 0011 1100
+    unsigned int b {13}; //13 = 0000 1101
+    int c {0};
+
+    c = a & b;
+    cout << " line 1 - value of c = a  b; is: " << c << endl;
+    c = a | b;//12 = 0000 1100
+    cout << " line 1 - value of c = a | b; is: " << c << endl;
+    c = a ^ b;//49 = 0011 0001
+    cout << " line 1 - value of c = a ^ b; is: " << c << endl;
+    c = ~a;//-61 = 1100 0011
+    cout << " line 1 - value of c = ~a; is: " << c << endl;
+    c = a << 2;//240 = 1111 0000
+    cout << " line 1 - value of c = a << 2; is: " << c << endl;
+    c = a >> 2;//15 = 0000 1111
+    cout << " line 1 - value of c = a >> 2; is: " << c << endl;
+
+    /* Sec 8 vid 73 Operator Precedence */
+    int x = 10, y = 3, z = 6;
+    cout << (x == y) << " ";
+    cout << (z <= x) << " ";
+    cout << (y != z) << " ";
+    cout << (x > y && z < x) << " ";
+    cout << (y < x && z < x) << " ";
+    cout << (x < y || z < 0) << endl;
+
+    x= 5;
+    y= -2;
+    z = 2;
+    // (5+-4<=5+4-5) then (1 <= 4) which is true or "1"
+    cout << (x + y * z <= x + z * z - x) << endl;
+
     return 0;
 }
