@@ -3,8 +3,10 @@
 //
 
 #include <iostream>
+#include <vector>
+#include <iomanip>
 using namespace std;
-int main(){
+int main() {
 
     /*
     enum Color {
@@ -111,6 +113,49 @@ int main(){
     }
     */
     /* Looping */
+    /* "for" loop
+     * "Range-based for" loop
+     * "while" loop
+     * "do-while" loop
+     * */
+    /*for (int i{1}, j{5}; i <= 5; ++i, ++j){
+        cout << i << " * " << j << " = " << (i * j) << endl;
+    }
+
+    vector <int> nums { 10, 20, 30, 40, 50 };
+    for (unsigned i {0}; i < nums.size() ; ++i){
+        cout << nums[i] << endl;
+    }
+
+    int sum {};
+    for (int i {1}; i <= 15; ++i){
+        sum += ((i%2 ==1)? i:0);
+    }
+    */
+    /* ranged based for loop */
+    int scores [] { 10, 20, 30, 40, 50, 70, 80, 100 };
+    for (int score : scores){
+        cout << score << endl;
+    }
+
+    vector<double> temperatures {87.9,77.9,80.0,72.5};
+    double average_temp {};
+    double total {};
+    for (auto temp : temperatures){
+        total +=temp;
+    }
+    if (temperatures.size() != 0){
+        average_temp = total / temperatures.size();
+    }
+    cout << "The average temperature is: " << average_temp << endl;
+
+    //to manip the input output stream include on top "#include <iomanip>"
+    cout << fixed << setprecision(1); // the number is how many numbers after the decimal point
+    cout << "The average temperature is: " << average_temp << endl;
+
+    for (auto c: "This is a test")
+        if (c != ' ')
+            cout << c;
 
     return 0;
 }
