@@ -6,7 +6,7 @@
 #include <vector>
 #include <iomanip>
 using namespace std;
-int main() {
+int main9() {
 
     /*
     enum Color {
@@ -132,8 +132,9 @@ int main() {
         sum += ((i%2 ==1)? i:0);
     }
     */
+
     /* ranged based for loop */
-    int scores [] { 10, 20, 30, 40, 50, 70, 80, 100 };
+    /*int scores [] { 10, 20, 30, 40, 50, 70, 80, 100 };
     for (int score : scores){
         cout << score << endl;
     }
@@ -156,6 +157,51 @@ int main() {
     for (auto c: "This is a test")
         if (c != ' ')
             cout << c;
+    */
 
+    /* WHILE LOOPS */
+    int i {1};
+    while (i <= 10){
+        if (i%2==0)
+            cout << i << endl;
+        ++i;
+    }
+
+    /* 2d vector  */
+    /*vector<vector<int>> vector_2d {
+            {1,2,3},
+            {10,20,30},
+            {100,200,300}
+    };
+
+    for (auto vec: vector_2d){
+        for (auto val: vec){
+            cout << val << " ";
+        }
+        cout << endl;
+    }*/
+    vector<int> vec {2,4,6,8};
+    int result {0};
+    if(vec.size() > 1){
+        for( int i {0}; i < vec.size(); ++i)
+            for (int j = i+1; j < vec.size(); ++j){
+                result += vec.at(i) * vec.at(j);
+            }
+    }
+    cout << "result is: " << result << endl; // should be 140
     return 0;
+}
+/* code exercise. I dont understand "&"vec  and the size_t ??*/
+int count_numbers(const vector<int> &vec) {
+    //---- WRITE YOUR CODE BELOW THIS LINE----
+    int count {0};
+    size_t index {0};  // See the Q/A forum for more about size_t
+    // size_t is an unsigned int
+    // you can replace size_t with int or unsigned int and it will work fine
+
+    while (index < vec.size() && vec.at(index) != -99  ) {
+        ++count;
+        ++index;
+    }
+    return count;
 }
