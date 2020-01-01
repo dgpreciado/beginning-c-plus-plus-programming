@@ -22,7 +22,7 @@
 void strings_and_functions();
 
 using namespace std;
-int main(){
+int main10(){
     /*char my_name[8]{};
     //my_name = "Dennis"; //causes an error
     strcpy(my_name,"Dennis");//ok
