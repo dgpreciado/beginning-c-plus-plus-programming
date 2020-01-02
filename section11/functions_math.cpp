@@ -24,7 +24,13 @@ void volume_cylinder(double radius, double height){
     cout << "The volume of a cylinder with radius " << radius << " and height " << height << " is: "
     <<calc_volume_cylinder( radius, height ) <<endl;
 }
-int main(){
+
+double calc_cost(double base_cost, double tax_rate = 0.06);//default argument
+double calc_cost2(double base_cost = 100.0, double tax_rate = 0.06);//default argument must start at the tail end.
+
+void print(int  = 1){}//overloaded function w/default arg causes "print() is ambiguous" error.
+void print(double = 1){}//overloaded function w/default arg causes "print() is ambiguous" error.
+int main_part1(){
     /*double num {};
     cout<<"Enter a number (double): ";
     cin>>num;
@@ -60,10 +66,16 @@ int main(){
     //c_math_functions();
 
     /* FUNCTIONS */
-    area_circle(10.3);
-    volume_cylinder(10.2,30.1);
+    //area_circle(10.3);
+    //volume_cylinder(10.2,30.1);
 
+    /* DEFAULT ARGUMENT */
+    /*cout << calc_cost(200.0 ) << endl;//default argument.
+    cout << calc_cost(100.00, 0.08 ) << endl;
+    cout << calc_cost2() << endl;*/
 
+    /* OVERLOADED FUNCTIONS */
+    //print();//will cause error because both overloaded functions have default args defined.
 
     return 0;
 }
@@ -84,4 +96,11 @@ void c_math_functions() {
     cout << "The individual bill at location 1 will be $" << individual_bill_1 << "\n"
     << "The individual bill at location 2 will be $" << individual_bill_2 << "\n"
     << "The individual bill at location 3 will be $" << individual_bill_3;
+}
+
+double calc_cost(double base_cost, double tax_rate ){
+    return base_cost +=(base_cost * tax_rate);
+}
+double calc_cost2(double base_cost, double tax_rate ){
+    return base_cost +=(base_cost * tax_rate);
 }
