@@ -5,7 +5,7 @@
 #include <iomanip>
 #include "iostream"
 
-int main(){
+int main_sec19_int(){
     int num {255};
     std::cout << std::dec << num << " should display 255" << std::endl;
     std::cout << std::hex << num << " should display ff" << std::endl;
@@ -57,7 +57,6 @@ int main(){
      * std::cout << std::resetiosflags(std::ios::showpos);
      * std::cout << std::resetiosflags(std::ios::uppercase);
      * **/
-
 
     return 0;
 }
