@@ -26,3 +26,39 @@
 // Field width, justification and fill: setw, left, right, internal, setfill
 // Others: end;, flush, skipws, noskipws, ws.
 
+#include <iomanip>
+#include "iostream"
+
+
+
+int main(){
+
+    std::cout << (10 == 10) << " should = 1" << std::endl;
+    std::cout << (10 == 20) << " should = 0" << std::endl;
+
+    std::cout << std::boolalpha;
+    std::cout << (10 == 10) << " should = true" << std::endl;
+    std::cout << (10 == 20) << " should = false" << std::endl;
+
+    std::cout << std::noboolalpha;
+    std::cout << (10 == 10) << " should = 1" << std::endl;
+    std::cout << (10 == 20) << " should = 0" << std::endl;
+
+    std::cout << std::boolalpha;
+    //std::cout << std::resetiosflags(std::ios::boolalpha);
+    std::cout << " should reset to default method version 1 " << std::endl;
+    std::cout << (10 == 10) << " should = true" << std::endl;
+    std::cout << (10 == 20) << " should = false" << std::endl;
+
+    //std::cout << std::boolalpha;
+    std::cout << std::resetiosflags(std::ios::boolalpha);
+    std::cout << " should reset to default method version 2 " << std::endl;
+    std::cout << (10 == 10) << " should = 1" << std::endl;
+    std::cout << (10 == 20) << " should = 0" << std::endl;
+
+    std::cout << std::resetiosflags(std::ios::boolalpha);
+    std::cout << (10 == 10) << " should = 1" << std::endl;
+    std::cout << (10 == 20) << " should = 0" << std::endl;
+
+    return 0;
+}

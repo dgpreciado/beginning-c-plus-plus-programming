@@ -45,4 +45,5 @@ int main648(){
     double wage {22.24};
     cout << "size of value of wage is: "<< sizeof(wage) << " bytes." << endl;
     cout << "size of wage is: "<< sizeof wage << " bytes." << endl;
+    return 0;
 }
