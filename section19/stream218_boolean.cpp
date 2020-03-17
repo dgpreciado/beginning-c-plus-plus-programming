@@ -31,7 +31,7 @@
 
 
 
-int main(){
+int main_sec19_1(){
 
     std::cout << (10 == 10) << " should = 1" << std::endl;
     std::cout << (10 == 20) << " should = 0" << std::endl;
