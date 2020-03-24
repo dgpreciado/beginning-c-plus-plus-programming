@@ -22,7 +22,7 @@ struct Tours {
     std::vector<Country> countries;
 };
 
-int main() {
+int main_challenge1() {
 
     Tours tours
             {"Tour Ticket prices from Miami",
