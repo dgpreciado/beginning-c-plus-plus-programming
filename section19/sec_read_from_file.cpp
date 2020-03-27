@@ -11,7 +11,7 @@
  * 4. Read data from the file the stream
  * 5. Close the stream
  * **/
- int main(){
+ int main_done(){
 
      /*
      std::fstream in_file {"scratch.txt",std::ios::in};
