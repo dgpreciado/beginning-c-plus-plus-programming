@@ -1,0 +1,94 @@
+fstream || ofstream
+#include <fstream>
+declare an fstream or ofstream object
+Connect it to a file on your system (opens it for writing)
+write data to the file via the stream
+close the stream
+
++++++
+output files will be created if they dont exist
+output files will be overwritten by default
+can be opened so that new writes append
+can be open in text or binary modes
+
++++++
+//opening a file for writing with (fstream)
+std::fstream out_file {"../section19/myfile.txt", std::ios::out};
+//open for writing in binary mode
+std::fstream out_file{"../section19/myfile.txt", std::ios::out | std::ios::binary};
+
++++++
+//opening a file for writing with (ofstream)
+std::ofstream out_file {"../section19/myfile.txt", std::ios::out};
+
+//std::ios::out is left out because it is the default
+std::ofstream out_file {"../section19/myfile.txt"};
+
+//open for writing in binary mode
+std::ofstream out_file{"../section19/myfile.txt", std::ios::binary};
+
++++++
+//truncate (discard contents) when opening
+std::ofstream out_file {"../section19/myfile.txt", std::ios::trunc};
+
+//Append on each write
+std::ofstream out_file {"../section19/myfile.txt", std::ios::app};
+
+//seek to the end of stream when opening
+std::ofstream out_file{"../section19/myfile.txt", std::ios::ate};
+
++++++
+std::ofstream out_file;
+std::string filename;
+std::cin >> filename;// get the file name
+
+out_file.open(filename);
+//or
+out_file.open(filename, std::ios::binary);
+
++++++
+if(out_file.is_open()){}//returns a boolean if file is open
+
+if(out_file){}//just check the object
+
++++++
+//important close the out stream
+out_file.close()
+
++++++
+int num {100};
+double total {255.67};
+std::string name {"Larry"};
+
+out_file << num << "\n"
+        << total << "\n"
+        << name << std::endl;
+
++++++
+//Copy a text file 1 line at a time
+std::ifstream in_file {"../myfile.txt"};//open file
+std::ofstream out_file {../copy.txt};
+
+if(!in_file){
+    std::cerr << "File open error" << std::endl;
+    return 1;
+}
+if(!out_file){
+    std::cerr << "File create error" << std::endl;
+    return 1;
+}
+
+sts::string line {};
+while(std::getline(in_file, line))
+    out_file <<line <<std::endl;
+
+//close streams
+in_file.close();
+out_file.close();
+
+
+//copy a file one character at a time (get/put)
+char c;
+while(in_file.get(c))
+    out_file.put(c);
+
