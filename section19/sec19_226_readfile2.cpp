@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include <fstream>
-int main(){
+int main226(){
     std::ifstream in_file;
     in_file.open("../section19/poem.txt");
     if(!in_file){
