@@ -6,7 +6,7 @@
 #include <iostream>
 #include <iomanip>
 
-int main(){
+int main_sec229(){
     std::ifstream in_file;
     in_file.open("../section19/poem.txt");
     if(!in_file){
